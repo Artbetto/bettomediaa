@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -18,10 +19,10 @@
                             darker: '#000000',
                             card: '#111111',
                             surface: '#1a1a1a',
-                            accent: '#d4a853',
-                            accentHover: '#c49a48',
-                            accentLight: '#e8c97a',
-                            accentDim: 'rgba(212,168,83,0.1)',
+                            accent: '#dc2626',
+                            accentHover: '#b91c1c',
+                            accentLight: '#ef4444',
+                            accentDim: 'rgba(220,38,38,0.1)',
                             text: '#f5f5f5',
                             muted: '#a3a3a3',
                             border: 'rgba(255,255,255,0.06)'
@@ -34,14 +35,14 @@
 
     <style>
         .text-gradient {
-            background: linear-gradient(135deg, #d4a853 0%, #e8c97a 50%, #f0d89a 100%);
+            background: linear-gradient(135deg, #dc2626 0%, #ef4444 50%, #f87171 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
         .text-gradient-subtle {
-            background: linear-gradient(135deg, #d4a853 0%, #b8934a 100%);
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -90,49 +91,55 @@
         .glass-card {
             background: rgba(17, 17, 17, 0.6);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(212, 168, 83, 0.08);
+            border: 1px solid rgba(220, 38, 38, 0.08);
         }
 
         .glass-card:hover {
-            border-color: rgba(212, 168, 83, 0.2);
+            border-color: rgba(220, 38, 38, 0.2);
         }
 
         .accent-glow {
-            box-shadow: 0 0 60px rgba(212, 168, 83, 0.15);
+            box-shadow: 0 0 60px rgba(220, 38, 38, 0.15);
         }
 
         .accent-glow-strong {
-            box-shadow: 0 0 80px rgba(212, 168, 83, 0.25), 0 0 20px rgba(212, 168, 83, 0.1);
+            box-shadow: 0 0 80px rgba(220, 38, 38, 0.25), 0 0 20px rgba(220, 38, 38, 0.1);
         }
 
         .line-separator {
             height: 1px;
-            background: linear-gradient(90deg, transparent 0%, rgba(212,168,83,0.3) 50%, transparent 100%);
+            background: linear-gradient(90deg, transparent 0%, rgba(220,38,38,0.3) 50%, transparent 100%);
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #d4a853 0%, #c49a48 100%);
-            color: #0a0a0a;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(220,38,38,0.55);
+            color: #f5f5f5;
+            box-shadow: 0 0 18px rgba(220,38,38,0.16);
             transition: all 0.3s ease;
         }
 
         .btn-primary:hover {
-            background: linear-gradient(135deg, #e8c97a 0%, #d4a853 100%);
+            background: rgba(220,38,38,0.08);
+            border-color: rgba(248,113,113,0.75);
+            color: #ffffff;
             transform: translateY(-2px);
-            box-shadow: 0 10px 40px rgba(212, 168, 83, 0.3);
+            box-shadow: 0 0 32px rgba(220,38,38,0.35);
         }
 
         .btn-secondary {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.08);
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(220,38,38,0.45);
             color: #f5f5f5;
+            box-shadow: 0 0 16px rgba(220,38,38,0.12);
             transition: all 0.3s ease;
         }
 
         .btn-secondary:hover {
-            background: rgba(255,255,255,0.06);
-            border-color: rgba(212,168,83,0.3);
+            background: rgba(220,38,38,0.08);
+            border-color: rgba(248,113,113,0.7);
             transform: translateY(-2px);
+            box-shadow: 0 0 28px rgba(220,38,38,0.28);
         }
 
         .filter-btn {
@@ -143,14 +150,14 @@
         }
 
         .filter-btn:hover {
-            border-color: rgba(212,168,83,0.2);
-            color: #d4a853;
+            border-color: rgba(220,38,38,0.2);
+            color: #dc2626;
         }
 
         .filter-btn.active {
-            background: rgba(212,168,83,0.1);
-            border-color: rgba(212,168,83,0.3);
-            color: #d4a853;
+            background: rgba(220,38,38,0.1);
+            border-color: rgba(220,38,38,0.3);
+            color: #dc2626;
         }
 
         .video-card {
@@ -159,9 +166,9 @@
         }
 
         .video-card:hover {
-            border-color: rgba(212,168,83,0.15);
+            border-color: rgba(255,255,255,0.12);
             transform: translateY(-4px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(212,168,83,0.05);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
         }
 
         .nav-link {
@@ -171,7 +178,7 @@
         }
 
         .nav-link:hover {
-            color: #d4a853;
+            color: #dc2626;
         }
 
         .nav-link::after {
@@ -181,7 +188,7 @@
             left: 0;
             width: 0;
             height: 1px;
-            background: #d4a853;
+            background: #dc2626;
             transition: width 0.3s ease;
         }
 
@@ -190,21 +197,21 @@
         }
 
         .stat-card {
-            background: linear-gradient(135deg, rgba(212,168,83,0.08) 0%, rgba(212,168,83,0.02) 100%);
-            border: 1px solid rgba(212,168,83,0.1);
+            background: linear-gradient(135deg, rgba(220,38,38,0.08) 0%, rgba(220,38,38,0.02) 100%);
+            border: 1px solid rgba(220,38,38,0.1);
         }
 
         .pricing-popular {
-            background: linear-gradient(180deg, rgba(212,168,83,0.08) 0%, rgba(17,17,17,0.6) 100%);
-            border: 1px solid rgba(212,168,83,0.2);
+            background: linear-gradient(180deg, rgba(220,38,38,0.08) 0%, rgba(17,17,17,0.6) 100%);
+            border: 1px solid rgba(220,38,38,0.2);
         }
 
         .check-icon {
-            color: #d4a853;
+            color: #dc2626;
         }
 
         ::selection {
-            background: rgba(212,168,83,0.3);
+            background: rgba(220,38,38,0.3);
             color: #f5f5f5;
         }
 
@@ -351,6 +358,37 @@ video{
 iframe{
     display:block;
 }
+
+
+        /* ===== ESTILO HERO COMO LA IMAGEN DE REFERENCIA ===== */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(circle at 50% 88%, rgba(220,38,38,0.18) 0%, rgba(220,38,38,0.08) 24%, transparent 58%),
+                radial-gradient(circle at 50% 30%, rgba(255,255,255,0.035) 0%, transparent 38%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -170px;
+            width: min(900px, 100vw);
+            height: 420px;
+            transform: translateX(-50%);
+            background: radial-gradient(circle, rgba(220,38,38,0.44) 0%, rgba(220,38,38,0.18) 36%, transparent 72%);
+            filter: blur(55px);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        nav {
+            box-shadow: 0 1px 0 rgba(255,255,255,0.04);
+        }
     </style>
 <base target="_blank">
 </head>
@@ -358,16 +396,16 @@ iframe{
 <body class="antialiased relative bg-black text-[#f5f5f5] overflow-x-hidden">
 
     <!-- Background Glows -->
-    <div class="bg-glow w-[600px] h-[600px] bg-[#d4a853] top-[-200px] left-[-200px]"></div>
-    <div class="bg-glow w-[800px] h-[800px] bg-[#8b6914] bottom-[5%] right-[-300px]"></div>
-    <div class="bg-glow w-[400px] h-[400px] bg-[#d4a853] top-[40%] left-[60%] opacity-[0.04]"></div>
+    <div class="bg-glow w-[600px] h-[600px] bg-[#dc2626] top-[-200px] left-[-200px]"></div>
+    <div class="bg-glow w-[800px] h-[800px] bg-[#7f1d1d] bottom-[5%] right-[-300px]"></div>
+    <div class="bg-glow w-[400px] h-[400px] bg-[#dc2626] top-[40%] left-[60%] opacity-[0.04]"></div>
 
     <!-- Navigation -->
        <nav class="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/[0.04] transition-all">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
         <a href="#" class="text-2xl font-bold tracking-tighter text-white flex items-center gap-1">
-            Betto<span class="text-[#d4a853]">media</span>
-            <span class="w-1.5 h-1.5 rounded-full bg-[#d4a853] mt-2"></span>
+            Betto<span class="text-[#dc2626]">media</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-[#dc2626] mt-2"></span>
         </a>
         <div class="hidden md:flex space-x-10 text-xs font-bold uppercase tracking-[0.2em]">
             <a href="#sobre-mi" class="nav-link">Sobre Mí</a>
@@ -383,9 +421,9 @@ iframe{
 
     <!-- Hero -->
     <header class="pt-40 pb-24 lg:pt-56 lg:pb-32 container mx-auto px-6 flex flex-col items-center text-center relative z-10">
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(212,168,83,0.08)] border border-[rgba(212,168,83,0.15)] mb-10">
-            <span class="w-2 h-2 rounded-full bg-[#d4a853] animate-pulse"></span>
-            <span class="text-[#d4a853] text-xs font-bold uppercase tracking-[0.15em]">Disponible para proyectos</span>
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(220,38,38,0.08)] border border-[rgba(220,38,38,0.15)] mb-10">
+            <span class="w-2 h-2 rounded-full bg-[#dc2626] animate-pulse"></span>
+            <span class="text-[#dc2626] text-xs font-bold uppercase tracking-[0.15em]">Disponible para proyectos</span>
         </div>
 
         <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter mb-8 leading-[0.95] max-w-5xl">
@@ -394,7 +432,7 @@ iframe{
         </h1>
         <p class="text-[#a3a3a3] text-lg md:text-xl max-w-2xl mb-14 font-medium leading-relaxed">
             Postproducción estratégica para marcas y creadores en formato vertical 9:16.
-            <span class="text-[#d4a853]">Engagement garantizado.</span>
+            <span class="text-[#dc2626]">Engagement garantizado.</span>
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
             <a href="#portafolio" class="btn-primary px-10 py-4 rounded-xl font-bold text-sm">
@@ -412,28 +450,18 @@ iframe{
     <section id="sobre-mi" class="py-24 bg-[#0a0a0a]/80 border-y border-white/[0.04] relative z-10">
         <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div class="relative w-full max-w-[320px] mx-auto lg:mx-0 lg:ml-40">
-                <div class="aspect-[9/16] rounded-[2rem] bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] border border-[rgba(212,168,83,0.1)] p-0.3 transform -rotate-2 hover:rotate-0 transition-transform duration-700 shadow-[0_0_60px_rgba(0,0,0,0.8)]">
-                    <div class="w-full h-full rounded-[1.6rem] overflow-hidden relative group bg-black">
-<div class="w-full h-full rounded-[1.6rem] overflow-hidden relative group bg-black">
-    <iframe
-        src="https://streamable.com/e/2xtgn9"
-        frameborder="0"
-        width="100%"
-        height="100%"
-        allowfullscreen
-        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 1.6rem;"
-    ></iframe>
-    <div class="absolute inset-0 bg-[rgba(212,168,83,0.05)] opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
-</div>
-
-                        <div class="absolute inset-0 bg-[rgba(212,168,83,0.05)] opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                <div class="aspect-[9/16] rounded-[2rem] bg-gradient-to-br from-[#1a1a1a] to-[#050505] border border-[rgba(220,38,38,0.18)] p-0 transform -rotate-2 hover:rotate-0 transition-transform duration-700 shadow-[0_0_60px_rgba(0,0,0,0.8)] overflow-hidden">
+                    <div class="w-full h-full rounded-[2rem] overflow-hidden relative bg-black">
+                        <iframe
+                            src="https://streamable.com/e/2xtgn9"
+                            frameborder="0"
+                            width="100%"
+                            height="100%"
+                            allowfullscreen
+                            style="position:absolute; top:0; left:0; width:100%; height:100%; border:0; border-radius:2rem; display:block;"
+                        ></iframe>
                     </div>
                 </div>
-                <div class="absolute -bottom-6 -right-6 stat-card text-white p-6 rounded-2xl shadow-2xl z-10">
-                    <div class="text-3xl font-black italic text-gradient">+500</div>
-                    <div class="text-[10px] font-bold uppercase tracking-tighter text-[#a3a3a3]">Videos Entregados</div>
-                </div>
-               
             </div>
             <div class="space-y-8">
                 <div class="line-separator w-16 mb-6"></div>
@@ -441,7 +469,7 @@ iframe{
                     Detrás de la <span class="text-gradient">Marca</span>.
                 </h2>
                 <div class="space-y-5 text-[#a3a3a3] text-lg leading-relaxed max-w-xl">
-                    <p>Soy Alberto González, te ayudo a elevar tu contenido al siguiente nivel. Mi trabajo no consiste en simplemente unir clips; mi especialidad es la <span class="text-[#d4a853] font-semibold">ingeniería de la atención</span>.</p>
+                    <p>Soy Alberto González, te ayudo a elevar tu contenido al siguiente nivel. Mi trabajo no consiste en simplemente unir clips; mi especialidad es la <span class="text-[#dc2626] font-semibold">ingeniería de la atención</span>.</p>
                     <p>En un ecosistema donde el scroll es infinito, mi misión es asegurar que los primeros 2 segundos de tu contenido detengan al usuario.</p>
                 </div>
                 <div class="flex gap-8 pt-4">
@@ -476,10 +504,14 @@ iframe{
             <button class="filter-btn px-6 py-2.5 rounded-lg text-xs font-bold uppercase tracking-widest" data-filter="marca">Marca Personal</button>
             <button class="filter-btn px-6 py-2.5 rounded-lg text-xs font-bold uppercase tracking-widest" data-filter="ia">IA / Faceless</button>
             <button class="filter-btn px-6 py-2.5 rounded-lg text-xs font-bold uppercase tracking-widest" data-filter="lifestyle">Lifestyle</button>
+          <button class="filter-btn px-6 py-2.5 rounded-lg text-xs font-bold uppercase tracking-widest" data-filter="UGC">IA UGC</button>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5" id="portfolio-grid">
             <div class="portfolio-item video-card relative aspect-[9/16] bg-[#0a0a0a] rounded-2xl overflow-hidden" data-category="corporativo">
+                <div class="video-container"><iframe src="https://www.youtube.com/embed/6aJ82zkiehc?si=KjAhsiRUgbyAOTfo" allowfullscreen loading="lazy"></iframe></div>
+            </div>
+          <div class="portfolio-item video-card relative aspect-[9/16] bg-[#0a0a0a] rounded-2xl overflow-hidden" data-category="corporativo">
                 <div class="video-container"><iframe src="https://www.youtube.com/embed/6aJ82zkiehc?si=KjAhsiRUgbyAOTfo" allowfullscreen loading="lazy"></iframe></div>
             </div>
             <div class="portfolio-item video-card relative aspect-[9/16] bg-[#0a0a0a] rounded-2xl overflow-hidden" data-category="corporativo">
@@ -498,6 +530,12 @@ iframe{
                 <div class="video-container"><iframe src="https://www.youtube.com/embed/dsj3zsq1xAg?si=H4W9uV2hK2ZHhZqs" allowfullscreen loading="lazy"></iframe></div>
             </div>
             <div class="portfolio-item video-card relative aspect-[9/16] bg-[#0a0a0a] rounded-2xl overflow-hidden" data-category="ia">
+                <div class="video-container"><iframe src="https://www.youtube.com/embed/mNOHZPqVIMo?si=nMd4xaA2RjNJL-J-" allowfullscreen loading="lazy"></iframe></div>
+            </div>
+          <div class="portfolio-item video-card relative aspect-[9/16] bg-[#0a0a0a] rounded-2xl overflow-hidden" data-category="ia">
+                <div class="video-container"><iframe src="https://www.youtube.com/embed/mNOHZPqVIMo?si=nMd4xaA2RjNJL-J-" allowfullscreen loading="lazy"></iframe></div>
+            </div>
+          <div class="portfolio-item video-card relative aspect-[9/16] bg-[#0a0a0a] rounded-2xl overflow-hidden" data-category="ia">
                 <div class="video-container"><iframe src="https://www.youtube.com/embed/mNOHZPqVIMo?si=nMd4xaA2RjNJL-J-" allowfullscreen loading="lazy"></iframe></div>
             </div>
             <div class="portfolio-item video-card relative aspect-[9/16] bg-[#0a0a0a] rounded-2xl overflow-hidden" data-category="ia">
@@ -555,14 +593,14 @@ class="btn-primary px-6 py-2.5 rounded-lg text-xs font-bold uppercase tracking-w
         <div class="container mx-auto px-6">
             <div class="mb-12">
                 <h2 class="text-4xl md:text-5xl font-black mb-4 uppercase tracking-tighter">
-                    <span class="text-[#d4a853]">Betto</span>media
+                    <span class="text-[#dc2626]">Betto</span>media
                 </h2>
                 <p class="text-[#525252] text-sm font-medium uppercase tracking-widest">Postproducción estratégica</p>
             </div>
 
-            <a href="mailto:bettomedia@gmail.com" class="inline-flex items-center gap-3 bg-[#111111] border border-[rgba(212,168,83,0.15)] text-white px-12 py-4 rounded-xl font-bold uppercase tracking-widest text-xs hover:border-[rgba(212,168,83,0.3)] hover:bg-[#1a1a1a] transition-all mb-16 group">
+            <a href="mailto:bettomedia@gmail.com" class="inline-flex items-center gap-3 bg-[#111111] border border-[rgba(220,38,38,0.15)] text-white px-12 py-4 rounded-xl font-bold uppercase tracking-widest text-xs hover:border-[rgba(220,38,38,0.3)] hover:bg-[#1a1a1a] transition-all mb-16 group">
                 <span>bettomedia@gmail.com</span>
-                <span class="text-[#d4a853] group-hover:translate-x-1 transition-transform">→</span>
+                <span class="text-[#dc2626] group-hover:translate-x-1 transition-transform">→</span>
             </a>
 
             <div class="line-separator w-32 mx-auto mb-10"></div>
