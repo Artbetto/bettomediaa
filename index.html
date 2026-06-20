@@ -325,14 +325,6 @@ video{
         display: none;
     }
 
-    .mobile-menu-btn{
-        display:flex;
-    }
-
-    .desktop-contact-btn{
-        display:none !important;
-    }
-
 }
 
 /* ===== SMALL PHONES ===== */
@@ -396,81 +388,95 @@ iframe{
         nav {
             box-shadow: 0 1px 0 rgba(255,255,255,0.04);
         }
+   
 
-        /* ===== MENÚ MÓVIL 3 RAYITAS ===== */
-        .mobile-menu-btn{
-            display:none;
-            width:44px;
-            height:44px;
-            align-items:center;
-            justify-content:center;
-            border:1px solid rgba(220,38,38,0.42);
-            border-radius:12px;
-            background: rgba(255,255,255,0.02);
-            color:#f5f5f5;
-            box-shadow: 0 0 18px rgba(220,38,38,0.14);
-            transition: all 0.3s ease;
-            cursor:pointer;
+        /* ===== MENÚ 3 RAYITAS EN TELÉFONO ===== */
+        .desktop-menu{
+            display:flex;
         }
 
-        .mobile-menu-btn:hover{
-            background: rgba(220,38,38,0.08);
-            border-color: rgba(248,113,113,0.75);
-            box-shadow: 0 0 28px rgba(220,38,38,0.28);
+        .mobile-menu-btn{
+            display:none;
+            width:46px;
+            height:46px;
+            align-items:center;
+            justify-content:center;
+            margin-left:auto;
+            border:1px solid rgba(220,38,38,0.55);
+            border-radius:14px;
+            background:rgba(255,255,255,0.03);
+            color:#ffffff;
+            box-shadow:0 0 20px rgba(220,38,38,0.18);
+            cursor:pointer;
+            z-index:9999;
         }
 
         .mobile-menu-btn svg{
-            width:23px;
-            height:23px;
+            width:25px;
+            height:25px;
+            display:block;
         }
 
         .mobile-menu{
+            display:none;
             position:absolute;
-            top: calc(100% + 12px);
-            right: 20px;
-            width: min(280px, calc(100vw - 40px));
-            background: rgba(10,10,10,0.96);
-            border:1px solid rgba(220,38,38,0.22);
+            top:calc(100% + 12px);
+            right:20px;
+            width:min(280px, calc(100vw - 40px));
+            background:rgba(5,5,5,0.97);
+            border:1px solid rgba(220,38,38,0.28);
             border-radius:18px;
-            padding:14px;
-            backdrop-filter: blur(18px);
-            box-shadow: 0 22px 55px rgba(0,0,0,0.55), 0 0 26px rgba(220,38,38,0.14);
-            opacity:0;
-            visibility:hidden;
-            pointer-events:none;
-            transform: translateY(-10px);
-            transition: all 0.25s ease;
+            padding:12px;
+            backdrop-filter:blur(18px);
+            box-shadow:0 22px 60px rgba(0,0,0,0.65), 0 0 28px rgba(220,38,38,0.16);
+            z-index:9998;
         }
 
         .mobile-menu.open{
-            opacity:1;
-            visibility:visible;
-            pointer-events:auto;
-            transform: translateY(0);
+            display:block;
         }
 
         .mobile-menu a{
             display:block;
             width:100%;
-            padding:13px 14px;
+            padding:14px 14px;
             border-radius:12px;
-            color:#f5f5f5;
+            color:#ffffff;
             font-size:12px;
-            font-weight:700;
+            font-weight:800;
             text-transform:uppercase;
             letter-spacing:0.12em;
-            transition: all 0.25s ease;
+            transition:all 0.25s ease;
         }
 
         .mobile-menu a:hover{
-            background: rgba(220,38,38,0.09);
-            color:#ef4444;
+            background:rgba(220,38,38,0.10);
+            color:#f87171;
         }
 
         .mobile-menu .mobile-contact-link{
             margin-top:8px;
-            border:1px solid rgba(220,38,38,0.35);
+            border:1px solid rgba(220,38,38,0.45);
             text-align:center;
+            box-shadow:0 0 18px rgba(220,38,38,0.12);
+        }
+
+        @media (max-width: 768px){
+            nav .container{
+                position:relative;
+                display:flex !important;
+                align-items:center !important;
+                justify-content:space-between !important;
+            }
+
+            .desktop-menu,
+            .desktop-contact-btn{
+                display:none !important;
+            }
+
+            .mobile-menu-btn{
+                display:flex !important;
+            }
         }
 
     </style>
@@ -485,15 +491,14 @@ iframe{
     <div class="bg-glow w-[400px] h-[400px] bg-[#dc2626] top-[40%] left-[60%] opacity-[0.04]"></div>
 
     <!-- Navigation -->
-<nav class="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/[0.04] transition-all">
+       <nav class="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/[0.04] transition-all">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center relative">
         <a href="#" class="text-2xl font-bold tracking-tighter text-white flex items-center gap-1">
             Betto<span class="text-[#dc2626]">media</span>
             <span class="w-1.5 h-1.5 rounded-full bg-[#dc2626] mt-2"></span>
         </a>
 
-        <!-- Menú normal en PC -->
-        <div class="hidden md:flex space-x-10 text-xs font-bold uppercase tracking-[0.2em]">
+        <div class="desktop-menu hidden md:flex space-x-10 text-xs font-bold uppercase tracking-[0.2em]">
             <a href="#sobre-mi" class="nav-link">Sobre Mí</a>
             <a href="#portafolio" class="nav-link">Portafolio</a>
             <a href="#ai-influencer-studio" class="nav-link">AI influencer studio</a>
@@ -504,17 +509,15 @@ iframe{
             Contacto
         </a>
 
-        <!-- Botón 3 rayitas para teléfono -->
-        <button id="mobileMenuBtn" class="mobile-menu-btn md:hidden" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <button id="mobileMenuBtn" class="mobile-menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <line x1="3" y1="6" x2="21" y2="6"></line>
                 <line x1="3" y1="12" x2="21" y2="12"></line>
                 <line x1="3" y1="18" x2="21" y2="18"></line>
             </svg>
         </button>
 
-        <!-- Opciones desplegables en teléfono -->
-        <div id="mobileMenu" class="mobile-menu md:hidden">
+        <div id="mobileMenu" class="mobile-menu">
             <a href="#sobre-mi">Sobre Mí</a>
             <a href="#portafolio">Portafolio</a>
             <a href="#ai-influencer-studio">AI influencer studio</a>
@@ -733,12 +736,12 @@ class="btn-primary px-6 py-2.5 rounded-lg text-xs font-bold uppercase tracking-w
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Menú móvil 3 rayitas
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
             const mobileMenu = document.getElementById('mobileMenu');
 
             if (mobileMenuBtn && mobileMenu) {
-                mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
                     const isOpen = mobileMenu.classList.toggle('open');
                     mobileMenuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
                 });
